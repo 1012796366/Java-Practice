@@ -11,7 +11,7 @@ public class theole1p8 {
 
         for (int i = 0; i < 100; ++i) {
             charArr[i] = (char)('a' + Math.random() * ('z' - 'a' + 1));     // 生成字符
-            System.out.println(charArr[i]);                                  // 输出字符
+            System.out.printf("%c", charArr[i]);                            // 输出字符
             ++totalCount[(short)(charArr[i] - 'a')];                        // 字符次数统计
         }
         for (int i = 0; i < 26; ++i) {
