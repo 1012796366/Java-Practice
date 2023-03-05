@@ -15,22 +15,22 @@ public class theole1p9 {
         int ans = randGen.nextInt(100) + 1;         // 生成随机数
         int inp;                                           // 存储猜想数
 
-        System.out.println("给你一个 1 ~ 100 的整数，请输入你对这个数的猜测值");
+        System.out.print("给你一个 1 ~ 100 的整数，请输入你对这个数的猜测值");
 
         do {
 
             // 读取输入
-            inp = reader.nextShort();
+            inp = reader.nextInt();
 
             if (inp > ans) {
-                System.out.println("猜的值大了，再尝试猜一个");
+                System.out.print("猜的值大了，再尝试猜一个");
             }
             else if (inp < ans) {
-                System.out.println("猜的值小了，再尝试猜一个");
+                System.out.print("猜的值小了，再尝试猜一个");
             }
 
         } while(inp != ans);
 
-        System.out.println("你猜对了！");
+        System.out.print("你猜对了！");
     }
 }
