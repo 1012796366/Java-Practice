@@ -18,7 +18,7 @@ public class theole1p7 {
         b[1] = 842;
 
         // 验证修改
-        System.out.println("arraycopy 后的内容");
+        System.out.print("arraycopy 后的内容\n");
         for (int i = 0; i < 10; ++i) {
             System.out.printf("a[%d]: %d\n", i, a[i]);
         }
