@@ -7,7 +7,7 @@ public class theole1p6 {
     public static void main(String[] args) {
         Scanner inputVal = new Scanner(System.in);      // 输入
 
-        System.out.println("请输入整数n:");
+        System.out.print("请输入整数n: ");
         int endNum = inputVal.nextInt(), totalVal = 0;
 
         // 执行相加，注意此处应当确保所输入的值 endNum 为正数，否则循环将出现问题
@@ -22,6 +22,6 @@ public class theole1p6 {
             totalVal = 1 - totalVal;
         }
 
-        System.out.println(totalVal);
+        System.out.printf("%d", totalVal);
     }
 }
