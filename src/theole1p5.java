@@ -7,7 +7,7 @@ public class theole1p5 {
     public static void main(String[] args) {
         for (int i = 945; i <= 969; ++i) {
             // 注释看题目提示即可
-            System.out.println((char)i);
+            System.out.printf("%c", (char)i);
         }
     }
 }
