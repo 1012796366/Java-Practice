@@ -13,7 +13,7 @@ public class theole1p9 {
         Scanner reader = new Scanner(System.in);
         Random randGen = new Random();
         int ans = randGen.nextInt(100) + 1;         // 生成随机数
-        int inp;                                           // 存储猜想
+        int inp;                                           // 存储猜想数
 
         System.out.println("给你一个 1 ~ 100 的整数，请输入你对这个数的猜测值");
 
