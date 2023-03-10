@@ -6,9 +6,8 @@ public class StuCard {
     private String major;                         // 专业
     private int grade;                            // 年级
     private String location;                      // 籍贯
-    public static int count = 0;                  // 人数
 
-    public StuCard() { ++count; this.grade = 1; }
+    public StuCard() { this.grade = 1; }
     public StuCard(String id, String name, String sex, String major, int grade, String location) {
         this.id = id;
         this.name = name;
@@ -16,7 +15,6 @@ public class StuCard {
         this.major = major;
         this.grade = grade;
         this.location = location;
-        ++count;
     }
     public StuCard(String id, String name, String sex) {
         this.id = id;
@@ -60,6 +58,10 @@ public class StuCard {
     }
     public  String getLocation() {
         return this.location;
+    }
+    public void show() {
+        System.out.printf("学号：%s\n名字：%s\n性别：%s\n专业：%s\n年级：%d\n籍贯：%s\n"
+                , this.id, this.name, this.sex, this.major, this.grade, this.location);
     }
 
 }
