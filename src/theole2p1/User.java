@@ -9,7 +9,7 @@ public class User {
         car2.setPower(76);
         System.out.printf("car1的功率是：%d\n", car1.getPower());
         System.out.printf("car2的功率是：%d\n", car2.getPower());
-        car1.speedUp(80);
+        car1.speedUp(70);
         car2.speedUp(80);
         System.out.printf("car1目前的速度：%f\n", car1.getSpeed());
         System.out.printf("car2目前的速度：%f\n", car2.getSpeed());
