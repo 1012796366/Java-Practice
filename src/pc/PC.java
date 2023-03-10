@@ -27,6 +27,6 @@ public class PC {
 
     public void setCPU(CPU cpu) { this.cpu.setSpeed(cpu.getSpeed()); }
     public void setHardDisk(HardDisk HD) { this.HD.setAmount(HD.getAmount()); }
-    public void show() { System.out.print("CPU速度：" + this.cpu.getSpeed() + "\n硬盘容量：" + this.HD.getAmount()); }
+    public void show() { System.out.print("CPU速度：" + this.cpu.getSpeed() + "\n硬盘容量：" + this.HD.getAmount() + '\n'); }
 
 }
