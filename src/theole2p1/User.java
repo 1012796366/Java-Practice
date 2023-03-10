@@ -1,3 +1,4 @@
+package theole2p1;
 public class User {
     public static void main(String[] args) {
         Vehicle car1, car2;

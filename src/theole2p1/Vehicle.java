@@ -1,3 +1,4 @@
+package theole2p1;
 public class Vehicle {
     double speed;
     int power;
