@@ -1,3 +1,4 @@
+package well;
 public class Village {
     private static int waterAmount;
     private int peopleNumber;
