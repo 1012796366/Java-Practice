@@ -1,3 +1,4 @@
+package pc.test;
 import pc.PC;
 import pc.hardware.cpu.CPU;
 import pc.hardware.harddisk.HardDisk;
