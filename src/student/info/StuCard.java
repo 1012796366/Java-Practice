@@ -6,8 +6,9 @@ public class StuCard {
     private String major;                         // 专业
     private int grade;                            // 年级
     private String location;                      // 籍贯
+    public static int count = 0;
 
-    public StuCard() { this.grade = 1; }
+    public StuCard() { this.grade = 1; count += 1; }
     public StuCard(String id, String name, String sex, String major, int grade, String location) {
         this.id = id;
         this.name = name;
@@ -15,12 +16,14 @@ public class StuCard {
         this.major = major;
         this.grade = grade;
         this.location = location;
+        count += 1;
     }
     public StuCard(String id, String name, String sex) {
         this.id = id;
         this.name = name;
         this.sex = sex;
         this.grade = 1;
+        count += 1;
     }
 
     public  void setID(String id) {

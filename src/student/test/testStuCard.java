@@ -28,5 +28,7 @@ public class testStuCard {
 
         System.out.print("包含全部信息的学生：\n");
         stuFI.show();
+
+        System.out.printf("当前学生数量：%d\n", StuCard.count);
     }
 }
