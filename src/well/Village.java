@@ -1,6 +1,6 @@
 package well;
 public class Village {
-    private static int waterAmount;
+    public static int waterAmount;
     private int peopleNumber;
     private String name;
 
