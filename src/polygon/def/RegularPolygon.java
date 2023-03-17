@@ -24,6 +24,6 @@ public class RegularPolygon {
     public double getX() { return this.x; }
     public double getY() { return this.y; }
     public double getPerimeter() { return this.side * this.n; }
-    public double getArea() { return (this.side * this.side * this.n) / (4 * Math.tan(3.1415 / this.n)); }
+    public double getArea() { return (this.side * this.side * this.n) / (4 * Math.tan(Math.PI / this.n)); }
 
 }
