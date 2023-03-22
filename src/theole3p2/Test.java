@@ -4,8 +4,10 @@ public class Test {
         Bank b1 = new Bank(50000, 5);
         BankOfQingdao b2 = new BankOfQingdao(50000, 5.216);
         ConstructionBank b3 = new ConstructionBank(50000, 5.216);
+        CommercialBank b4 = new CommercialBank(8000, 8.236);
         b2.computerInterest();
         b3.computerInterest();
+        b4.computerInterest();
         if (b2.interest > b3.interest) {
             System.out.print("青行利息较多，");
         }
@@ -13,6 +15,7 @@ public class Test {
             System.out.print("建行利息较多，");
         }
         System.out.printf("利息差额为 %.2f 元\n", Math.abs(b2.interest - b3.interest));
+        System.out.printf("在商业银行存 8 年 236 天的 8000 元后，可拿利息 %.2f 元\n", b4.interest);
     }
 }
 
@@ -35,7 +38,6 @@ class ConstructionBank extends Bank {
     public ConstructionBank(int savedMoney, double year) {
         super(savedMoney, (int)year);
         this.year = year;
-        super.year = (int)year;
     }
     double computerInterest() {
         int days = (int)((this.year - (double)super.year) * 100);
@@ -51,7 +53,6 @@ class BankOfQingdao extends Bank {
     public BankOfQingdao(int savedMoney, double year) {
         super(savedMoney, (int)year);
         this.year = year;
-        super.year = (int)year;
     }
     double computerInterest() {
         int days = (int)((this.year - (double)super.year) * 100);
@@ -59,5 +60,19 @@ class BankOfQingdao extends Bank {
         interest += days * 0.00015 * savedMoney;
         return interest;
         // 不可以直接 return，利息计算结果必须保存
+    }
+}
+
+class CommercialBank extends Bank {
+    double year;
+    public CommercialBank(int savedMoney, double year) {
+        super(savedMoney, (int)year);
+        this.year = year;
+    }
+    double computerInterest() {
+        int days = (int)((this.year - (double)super.year) * 100);
+        super.computerInterest();
+        interest += days * 0.00012 * savedMoney;
+        return interest;
     }
 }
