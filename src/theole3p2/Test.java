@@ -40,7 +40,7 @@ class ConstructionBank extends Bank {
         this.year = year;
     }
     double computerInterest() {
-        int days = (int)((this.year - (double)super.year) * 100);
+        int days = (int)((this.year - (double)super.year) * 1000);
         super.computerInterest();
         interest += days * 0.0001 * savedMoney;
         return interest;
@@ -55,7 +55,7 @@ class BankOfQingdao extends Bank {
         this.year = year;
     }
     double computerInterest() {
-        int days = (int)((this.year - (double)super.year) * 100);
+        int days = (int)((this.year - (double)super.year) * 1000);
         super.computerInterest();
         interest += days * 0.00015 * savedMoney;
         return interest;
@@ -70,7 +70,7 @@ class CommercialBank extends Bank {
         this.year = year;
     }
     double computerInterest() {
-        int days = (int)((this.year - (double)super.year) * 100);
+        int days = (int)((this.year - (double)super.year) * 1000);
         super.computerInterest();
         interest += days * 0.00012 * savedMoney;
         return interest;
