@@ -1,6 +1,6 @@
 package theole4p1;
 
-public class Test {
+public class Application {
     public static void main(String[] args) {
         Simulator simulator = new Simulator();
         simulator.playSound(new Dog("藏獒"));
