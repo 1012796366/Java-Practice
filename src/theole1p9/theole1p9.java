@@ -5,6 +5,7 @@
  *  （3）程序返回提示信息，提示信息分别是"猜大了"、"猜小了"或"猜对了"。
  *  （4）用户可根据提示信息再次输入猜测，直到提示信息是"猜对了"。
  */
+package theole1p9;
 import java.util.Scanner;
 import java.util.Random;
 
