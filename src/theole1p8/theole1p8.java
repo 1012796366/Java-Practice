@@ -4,6 +4,8 @@
  * （2）对上述数组中每个字母出现的次数进行计数。为实现该功能，可以创建一个具有26个元素的整型数组，每个元素存放每个字母的出现次数。输出每个字符及其出现的次数。
  *  提示：(char)('a' + Math.random() * ('z' - 'a' + 1))  可以随机生成一个小写字母
  */
+package theole1p8;
+
 public class theole1p8 {
     public static void main(String[] args) {
         char[] charArr = new char[100];     // 存储字符
