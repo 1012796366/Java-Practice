@@ -1,4 +1,4 @@
-package pc.hardware.harddisk;
+package theole2p3.pc.hardware.harddisk;
 
 public class HardDisk {
     private int amount;

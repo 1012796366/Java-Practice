@@ -1,4 +1,4 @@
-package pc.hardware.cpu;
+package theole2p3.pc.hardware.cpu;
 
 public class CPU {
     private int speed;

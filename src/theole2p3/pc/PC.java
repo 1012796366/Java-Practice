@@ -1,6 +1,6 @@
-package pc;
-import pc.hardware.cpu.CPU;
-import pc.hardware.harddisk.HardDisk;
+package theole2p3.pc;
+import theole2p3.pc.hardware.cpu.CPU;
+import theole2p3.pc.hardware.harddisk.HardDisk;
 
 public class PC {
     private CPU cpu;
