@@ -1,5 +1,5 @@
-package student.test;
-import student.info.StuCard;
+package theole2p2.student.test;
+import theole2p2.student.info.StuCard;
 public class testStuCard {
     public static void main(String[] args) {
         StuCard stuNI = new StuCard();                                                     // No Info     缺乏任何信息
