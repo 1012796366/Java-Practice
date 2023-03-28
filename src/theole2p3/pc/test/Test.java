@@ -1,7 +1,7 @@
-package pc.test;
-import pc.PC;
-import pc.hardware.cpu.CPU;
-import pc.hardware.harddisk.HardDisk;
+package theole2p3.pc.test;
+import theole2p3.pc.PC;
+import theole2p3.pc.hardware.cpu.CPU;
+import theole2p3.pc.hardware.harddisk.HardDisk;
 
 public class Test {
     public static void main(String[] args) {
