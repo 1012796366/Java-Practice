@@ -2,6 +2,8 @@
  * 提示：数组复制可以使用System类的arraycopy方法，该方法的原型为：public static void arraycopy(Object source , int srcIndex , Object dest , int destIndex , int length )，参数中，source表示源数组，srcIndex表示源数组中开始复制的元素的位置，dest表示目标数组，destIndex表示复制到目标数组时从哪个位置赋值，length表示复制的元素个数。该方法的使用语句是：
  * System.arraycopy(a,3,b,0,4 )//实参只是一个示例，可以根据要求自己修改
  */
+package theole1p7;
+
 public class theole1p7 {
     public static void main(String[] args) {
         int[] a = new int[10];              // 需要输出的数组
