@@ -1,4 +1,4 @@
-package student.info;
+package theole2p2.student.info;
 public class StuCard {
     private String id;                            // 学号
     private String name;                          // 姓名
