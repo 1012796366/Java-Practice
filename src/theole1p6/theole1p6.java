@@ -1,6 +1,7 @@
 /*
  * 6．从键盘输入整数n，计算1~n的累加和并输出。
  */
+package theole1p6;
 import java.util.Scanner;
 
 public class theole1p6 {
