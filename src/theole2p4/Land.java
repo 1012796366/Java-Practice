@@ -1,4 +1,4 @@
-package well;
+package theole2p4;
 public class Land {
     public static void main(String[] args) {
         Village vil1 = new Village(300, "张村");

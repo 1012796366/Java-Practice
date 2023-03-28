@@ -1,4 +1,4 @@
-package well;
+package theole2p4;
 public class Village {
     public static int waterAmount;
     private int peopleNumber;
