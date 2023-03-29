@@ -30,8 +30,8 @@ class Goods {
 
 class DangerException extends Exception {
     private String message;
-    public DangerException(String itemName) { message = "检测到危险品：" + itemName + "\n"; }
-    public DangerException() { message = "检测到危险品\n"; }
+    public DangerException(String itemName) { message = itemName + "属于危险品\n"; }
+    public DangerException() { message = "属于危险品\n"; }
     public void toShow() { System.err.print(message); }
 }
 
