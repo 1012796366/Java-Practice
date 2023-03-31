@@ -30,7 +30,7 @@ class Goods {
 
 class DangerException extends Exception {
     private String message;
-    public DangerException(String itemName) { message = itemName + "属于危险品\n"; }
+    // public DangerException(String itemName) { message = itemName + "属于危险品\n"; }
     public DangerException() { message = "属于危险品\n"; }
     public void toShow() { System.err.print(message); }
 }
@@ -38,7 +38,7 @@ class DangerException extends Exception {
 class Machine {
     public void CheckBag(Goods item) throws DangerException {
         if (!item.isDanger()) {
-            throw new DangerException(item.getName());
+            throw new DangerException();
         }
     }
 }
