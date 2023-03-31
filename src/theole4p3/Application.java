@@ -1,13 +1,13 @@
 package theole4p3;
-import java.util.LinkedList;
 
 public class Application {
     public static void main(String[] args) {
-        Truck truck = new Truck();
-        truck.load(new Computer(1.7));
-        truck.load(new Computer(3.2));
-        truck.load(new TV(22.5));
-        truck.load(new WashMachine(45.7));
+        ComputerWeight[] loads = new ComputerWeight[4];
+        loads[0] = new WashMachine(45.7);
+        loads[1] = new Computer(3.2);
+        loads[2] = new Computer(1.7);
+        loads[3] = new TV(22.5);
+        Truck truck = new Truck(loads);
         System.out.printf("卡车装载货物重量：%.1f\n", truck.computerWeight());
     }
 }
@@ -35,9 +35,8 @@ class WashMachine implements ComputerWeight {
 }
 
 class Truck implements ComputerWeight {
-    private LinkedList<ComputerWeight> loads;
-    public Truck() { loads = new LinkedList<>(); }
-    public void load(ComputerWeight target) { loads.add(target); }
+    private ComputerWeight[] loads;
+    public Truck(ComputerWeight[] loads) { this.loads = loads; }
     public double computerWeight() {
         double total = 0.0;
         for (ComputerWeight elem : loads) {
