@@ -8,9 +8,9 @@ public class Application {
         String[] arr = input.split("元");
         double total = 0;
         for (String elem : arr) {
-            System.out.println(elem + " 元");
+            System.out.printf("%s 元\n", elem);
             total += Double.parseDouble(elem.split("：")[1]);
         }
-        System.out.println("总价格：" + total + " 元");
+        System.out.printf("总价格：%.2f 元", total);
     }
 }
