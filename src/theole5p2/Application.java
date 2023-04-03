@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Application {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        System.out.println("编码最大的字符：" + charProcessor.getMAX(reader.nextLine()));
+        System.out.printf("编码最大的字符：%c", charProcessor.getMAX(reader.nextLine()));
     }
 }
 
