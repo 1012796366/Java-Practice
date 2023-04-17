@@ -28,26 +28,23 @@ public class Application {
 
             for (int i = 0; i < amount; ++i) {
                 score = Integer.parseInt(fi.readLine().split(" ")[1]);
+                System.out.println(score);
                 if (score > max) {
                     max = score;
-                } else if (score < min) {
+                }
+                if (score < min) {
                     min = score;
                 }
             }
             fi.close();
 
-            if (max == -999999) {
-                max = min;
-            } else if (min == 999999) {
-                min = max;
-            }
             System.out.printf("最高分：%d\n最低分：%d\n", max, min);
         } catch (FileNotFoundException e) {
             System.err.print("发生了文件读写错误：");
-            System.err.print(e.getCause());
+            System.err.print(e.getCause().getMessage());
         } catch (IOException e) {
             System.err.print("发生了 IO 操作错误：");
-            System.err.print(e.getCause());
+            System.err.print(e.getCause().getMessage());
         }
     }
 }
