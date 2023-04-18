@@ -5,7 +5,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             BufferedReader input = new BufferedReader(new FileReader("src/theole6p3/score.txt"));
-            BufferedWriter output = new BufferedWriter(new FileWriter("src/theole6p3/totalscoretxt"));
+            BufferedWriter output = new BufferedWriter(new FileWriter("src/theole6p3/totalscore.xt"));
             String s;
             String score;
             String[] scr;
