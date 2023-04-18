@@ -18,7 +18,8 @@ public class Application {
             input.close();
             output.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.print("捕获异常！\n");
+            e.printStackTrace(System.err);
         }
     }
 }
