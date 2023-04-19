@@ -9,6 +9,13 @@ public class Application {
         sqlobj.delete();
         sqlobj.modify();
         sqlobj.query();
+        try {
+            sqlobj.con.close();
+        } catch (SQLException e) {
+            System.err.print("关闭连接时发生异常！\n");
+            e.printStackTrace();
+            System.exit(1);
+        }
     }
 }
 
