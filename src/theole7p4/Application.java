@@ -22,7 +22,7 @@ class SQLInteractive {
             con = DriverManager.getConnection(url, username, password);
             status = con.createStatement();
         } catch (Exception e) {
-            System.err.print("第一次捕获异常！\n");
+            System.err.print("构造函数捕获异常！\n");
             e.printStackTrace();
             System.exit(1);
         }
@@ -32,17 +32,29 @@ class SQLInteractive {
             status.execute("INSERT INTO student(stuID, stuName, courseName, score) VALUES('123456', '张三', 'Java', '90')");
             status.execute("INSERT INTO student(stuID, stuName, courseName, score) VALUES('654321', '李四', 'Java', '80')");
             status.execute("INSERT INTO student(stuID, stuName, courseName, score) VALUES('321456', '王五', 'Java', '95')");
-        } catch (SQLException e) {}
+        } catch (SQLException e) {
+            System.err.print("插入方法捕获异常！\n");
+            e.printStackTrace();
+            System.exit(1);
+        }
     }
     public void delete() {
         try {
             int res2 = status.executeUpdate("DELETE FROM student WHERE stuName='李四'");
-        } catch (SQLException e) {}
+        } catch (SQLException e) {
+            System.err.print("删除方法捕获异常！\n");
+            e.printStackTrace();
+            System.exit(1);
+        }
     }
     public void modify() {
         try {
             int res3 = status.executeUpdate("UPDATE student SET score=100 WHERE stuName='张三'");
-        } catch (SQLException e) {}
+        } catch (SQLException e) {
+            System.err.print("修改方法捕获异常！\n");
+            e.printStackTrace();
+            System.exit(1);
+        }
     }
     public void query() {
         try {
@@ -50,6 +62,10 @@ class SQLInteractive {
             while (res4.next()) {
                 System.out.print(res4.getInt(1));
             }
-        } catch (SQLException e) {}
+        } catch (SQLException e) {
+            System.err.print("查询方法捕获异常！\n");
+            e.printStackTrace();
+            System.exit(1);
+        }
     }
 }
