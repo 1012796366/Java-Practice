@@ -3,8 +3,10 @@ import java.sql.*;
 
 public class Application {
     public static void main(String[] args) {
-        SQLInteractive sqlobj = new SQLInteractive("jdbc:mysql://[数据库地址，本机上搭建一般为localhost，写的时候去掉中括号]:[数据库端口，一般不改就是3306]/[数据库名，该库必须存在]?useSSL=false&serverTimezone=UTC",
-                "[账户名，没添加的话就是root]", "[账户密码]");
+        SQLInteractive sqlobj = new SQLInteractive(
+                "jdbc:mysql://[数据库地址，本机上搭建一般为localhost，写的时候去掉中括号]:[数据库端口，一般不改就是3306]/[数据库名，该库必须存在]?useSSL=false&serverTimezone=UTC",
+                "[账户名，没添加的话就是root]", "[账户密码]"
+        );
         sqlobj.insert();
         sqlobj.delete();
         sqlobj.modify();
