@@ -13,6 +13,7 @@ public class Application {
         sqlobj.query();
         try {
             sqlobj.con.close();
+            sqlobj.status.close();
         } catch (SQLException e) {
             System.err.print("关闭连接时发生异常！\n");
             e.printStackTrace();
@@ -30,6 +31,17 @@ class SQLInteractive {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(url, username, password);
             status = con.createStatement();
+            // 由于每次创建的表在程序结束后依然保留在数据库里
+            // 因此每次开始时直接删除该表，直接重新开始
+            // 不然，为了避免在插入部分发生插入重复值的报错
+            // 每次都得手动删除表，很麻烦
+            status.executeUpdate("DROP TABLE IF EXISTS student");
+            int res1 = status.executeUpdate("CREATE TABLE student(" +
+                    "stuId varchar(6) primary key, " +
+                    "stuName nvarchar(5) not null," +
+                    "courseName nvarchar(5) not null," +
+                    "score int)"
+            );
         } catch (Exception e) {
             System.err.print("构造函数捕获异常！\n");
             e.printStackTrace();
