@@ -18,7 +18,6 @@ public class Application {
         List<subject> all_score = new ArrayList<>();
         String temp;
         String[] tempArr;
-        String str2Write = null;
         while ((temp = input.readLine()) != null) {
             tempArr = temp.split(" ");
             all_score.add(new subject(tempArr[0], Integer.parseInt(tempArr[1])));
@@ -29,7 +28,7 @@ public class Application {
         for (subject elem : all_score) {
             ++count;
             // 想要不开文件就看到文件内容，直接去掉下一行代码的注释
-            // System.out.print(str2Write);
+            System.out.print(count + " " + elem.name + " " + elem.score + "\n");
             output.write(count + " " + elem.name + " " + elem.score + "\n");
         }
         input.close();
