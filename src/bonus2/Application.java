@@ -28,7 +28,7 @@ public class Application {
         for (subject elem : all_score) {
             ++count;
             // 想要不开文件就看到文件内容，直接去掉下一行代码的注释
-            System.out.print(count + " " + elem.name + " " + elem.score + "\n");
+            // System.out.print(count + " " + elem.name + " " + elem.score + "\n");
             output.write(count + " " + elem.name + " " + elem.score + "\n");
         }
         input.close();
